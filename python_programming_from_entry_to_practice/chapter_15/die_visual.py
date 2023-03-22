@@ -1,5 +1,5 @@
 from die import Die
-from plotly.graph_objs import bar, Layout
+from plotly.graph_objs import Bar, Layout
 from plotly import offline
 
 # 创建一个D6
@@ -21,7 +21,7 @@ for value in range(1, die.num_sides+1):
 
 # 对结果进行可视化
 x_values = list(range(1, die.num_sides+1))
-data = [bar(x=x_values, y=frequencies)]
+data = [Bar(x=x_values, y=frequencies)]
 
 x_axis_config = {'title': 'result'}
 y_axis_config = {'title': 'freq of result'}
